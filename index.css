@@ -1,0 +1,628 @@
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&family=Fira+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Damion&family=Niconne&family=Rancho&family=Open+Sans&family=Roboto+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" );
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Background Styling */
+.background {
+    background: url(''), #84c441;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Meal Card */
+.meal-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 87vw;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 50;
+}
+.meal-details{
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    gap: 30px;
+}
+.meal-details img{
+    width: 300px;
+}
+.aboutHeader { 
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight:500;
+    margin: 20px;
+}
+h5{
+    font-family: 'Damion', cursive;
+    font-size: 28px;
+    font-weight: 500;
+    color: #84c441;
+}
+/* Filter Buttons */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.filter-btn.active {
+    background: white;
+    border: 2px solid #84c441;
+    color: #84c441;
+}
+
+
+.meal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+
+
+.side-img-right {
+    width: 20%;
+    /* Adjust as needed */
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+
+.side-img-left {
+    width: 20%;
+    /* Adjust as needed */
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 2%;
+}
+
+.right {
+    right: 2%;
+    transform: translateY(-50%) rotate(180deg);
+
+}
+
+
+.healthy-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    padding: 40px 40px;
+}
+
+.item {
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 10px;
+
+}
+
+.item img {
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.item h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.drink {
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.drinks-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px 100px;
+}
+
+.drink img {
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.drink h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+/* Amenities Section */
+.Amenities-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px; /* Space between amenities */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Individual Amenity */
+.amenities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 200px;
+    
+}
+
+/* Hover Effect */
+.iconSection:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Container */
+.iconSection {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #84c441; /* Accent color */
+    padding: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.amenities-container{
+    background-color:#f8f8f8 ;
+    padding: 20px 0;
+}
+
+/* Icon Image */
+.iconSection img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Amenity Title */
+.amenities h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+.all{
+    margin: 100px 0;
+    text-align: center;
+}
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: justify;
+    line-height: 50px;
+    padding: 40px 100px;
+}
+
+.about div {
+    max-width: 100%;
+}
+
+.about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 50-50 split */
+    gap: 30px;
+    padding: 40px 100px;
+    align-items: flex-start;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: start;
+}
+
+.address-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.address-box img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.address-text {
+    flex: 1;
+    
+}
+.address-text h4{
+    margin: 10px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.formButton{
+    padding: 15px 60px;
+    margin: 20px 0;
+    background-color: #84c441;
+    color: #fff;
+    border: none;
+    border-radius: 10px ;
+    font-size: 15px;
+}
+.form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+/* Swiper Container */
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide {
+    background-color: #000;
+    color: #ccc;
+}
+
+/* ===== Custom Pagination Dots ===== */
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: #ff6600; /* Default bullet color */
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+/* ===== Custom Navigation Buttons ===== */
+.swiper-button-next,
+.swiper-button-prev {
+    background-color: transparent; 
+    border: 2px solid white;
+    width: 100px;  /* Adjusted width */
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+}
+
+/* 🚀 THIS LINE COMPLETELY REMOVES THE DEFAULT ARROWS */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none !important; /* FORCE REMOVE DEFAULT ARROWS */
+}
+
+/* Custom Left Arrow */
+.swiper-button-prev {
+    background-image: url('assets/arrow.png'); /* Replace with actual image */
+    background-size: 100%;
+    rotate: 180deg;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Custom Right Arrow */
+.swiper-button-next {
+    background-image: url('assets/arrow.png'); /* Replace with actual image */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Hover Effect */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Custom Pagination Bullets */
+.swiper-pagination-bullet {
+    width: 8px !important;  /* Adjust size */
+    height: 8px !important;
+    background-color: #fff !important; /* Change bullet color */
+    opacity: 0.8 !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+/* Active Bullet */
+.swiper-pagination-bullet-active {
+    background-color: #84c441 !important; /* Change active bullet color */
+    transform: scale(1.4) !important; /* Slightly enlarge active bullet */
+}
+
+/* Positioning */
+.swiper-pagination {
+    bottom: 20px !important; /* Adjust bullet position */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .about {
+        padding: 40px 40px;
+    }
+}
+
+
+@media (max-width: 968px) {
+    .meal-card {
+        width: 90vw;
+        min-height: 85vh;
+        padding: 20px;
+    }
+
+    .filters {
+        gap: 20px;
+    }
+
+    .meal-content {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .item img {
+        max-width: 300px;
+    }
+
+    .healthy-item {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .drinks-item {
+        padding: 40px 80px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 40px 40px;
+
+    }
+   
+    
+}
+
+@media (max-width: 768px) {
+    .meal-card {
+        width: 90vw;
+        min-height: 85vh;
+        /* Adjust for smaller screens */
+        padding: 20px;
+
+    }
+    .Amenities-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .amenities {
+        width: 90%;
+    }
+
+    .filters {
+        gap: 20px;
+    }
+
+    .meal-content {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .filter-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .item img {
+        max-width: 250px;
+    }
+
+    .healthy-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .Amenities-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .drinks-item {
+        padding: 40px 60px;
+    }
+
+    .amenities-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .amenities {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        /* Stack in small screens */
+        padding: 40px 40px;
+        line-height: 40px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        /* Stack on smaller screens */
+        text-align: center;
+    }
+
+    .address-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .address-box img {
+        width: 40px;
+        height: 40px;
+    }
+    .iconSection {
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+    }
+    .iconSection img {
+        width: 40px;
+        height: 40px;
+    }
+    .amenities h5 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+    }
+}
+
+@media (max-width: 480px) {
+    .meal-card {
+        width: 95vw;
+        min-height: 90vh;
+        /* Fill the screen more on small devices */
+        padding: 15px;
+    }
+
+    .filter-btn {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .filters {
+        gap: 10px;
+    }
+
+    .meal-content {
+        font-size: 14px;
+        gap: 40px;
+    }
+
+    .item img {
+        max-width: 200px;
+    }
+
+    .healthy-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    .Amenities-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .drinks-item {
+        padding: 40px 40px;
+    }
+    
+    .smallheader{
+        font-size: 40px;
+    }
+    .all{
+        margin: 70px 0;
+    }
+    .drinks-item {
+     
+        gap: 20px;
+        padding: 10px 40px;
+    }
+    .aboutHeader{
+        font-size: 40px;
+    }
+    .contact-container{
+        padding: 0px 40px;
+    }
+}

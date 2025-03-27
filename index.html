@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Meal Plan</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+</head>
+
+<body>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+        </div>
+    
+        <!-- Custom Pagination -->
+        <div class="swiper-pagination"></div>
+    
+        <!-- Custom Navigation Buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <!--healthy-item -->
+    <div class="all">
+        <h5  data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">Hungry Yet</h5>
+        <h3 class="aboutHeader" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">Healthy-Item</h3>
+        <div class="healthy-item">
+            <div class="item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                <img src="assets/plate_rounded.jpg" alt="">
+                <h4>Brown Rice Biryani</h4>
+            </div>
+            <div class="item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+                <img src="assets/plate_rounded.jpg" alt="">
+                <h4>Brown Rice Biryani</h4>
+            </div>
+            <div class="item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+                <img src="assets/plate_rounded.jpg" alt="">
+                <h4>Brown Rice Biryani</h4>
+            </div>
+            <div class="item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="700">
+                <img src="assets/plate_rounded.jpg" alt="">
+                <h4>Brown Rice Biryani</h4>
+            </div>
+            <div class="item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="800">
+                <img src="assets/plate_rounded.jpg" alt="">
+                <h4>Brown Rice Biryani</h4>
+            </div>
+            <div class="item" data-aos="fade-up" data-aos-duration="700" data-aos-delay="900">
+                <img src="assets/plate_rounded.jpg" alt="">
+                <h4>Brown Rice Biryani</h4>
+            </div>
+        </div>
+    </div>
+
+    <!-- drinks -->
+    <div class="all">
+        <h5  data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">Hungry Yet</h5>
+        <h3 class="aboutHeader" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">Drinks</h3>
+        <div class="drinks-item">
+            <div class="drink" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+                <img src="assets/drink.png" alt="">
+                <h4>Fresh Fruit Juice</h4>
+            </div>
+            <div class="drink" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                <img src="assets/drink.png" alt="">
+                <h4>Smoothies</h4>
+            </div>
+        </div>
+    </div>
+    <!-- menu -->
+    <div class="all">
+        <div class="background" >
+            <!-- <img src="/assets/menu.png" alt="Left Decoration" class="side-img-left left"> -->
+            <div class="meal-card" >
+                <h5  data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200">Hungry Yet</h5>
+                <h2 class="aboutHeader"  data-aos="zoom-in" data-aos-duration="700" data-aos-delay="300">Our Meal Plan</h2>
+                <!-- Filter for Days -->
+                <div class="filters"  data-aos="zoom-in" data-aos-duration="700" data-aos-delay="400">
+                    <button class="filter-btn active" onclick="filterMeals('Monday')">Monday</button>
+                    <button class="filter-btn" onclick="filterMeals('Tuesday')">Tuesday</button>
+                    <button class="filter-btn" onclick="filterMeals('Wednesday')">Wednesday</button>
+                    <button class="filter-btn" onclick="filterMeals('Thursday')">Thursday</button>
+                    <button class="filter-btn" onclick="filterMeals('Friday')">Friday</button>
+                </div>
+
+                <!-- Meal Details -->
+               <div class="meal-details">
+                <div class="meal-content"  data-aos="zoom-in" data-aos-duration="700" data-aos-delay="500">
+                    <h3 id="day-title">Monday</h3>
+                    <p><strong>Breakfast:</strong> <span id="breakfast">Oatmeal with Berries</span></p>
+                    <p><strong>Lunch:</strong> <span id="lunch">Grilled Chicken with Veggies</span></p>
+                    <p><strong>Snack:</strong> <span id="snack">Mixed Nuts & Yogurt</span></p>
+                    <h4><span id="cost">1</span></h4>
+                </div>
+                <div class="">
+                    <img src="assets/plate_rounded.jpg" alt="">
+                </div>
+               </div>
+            </div>
+            <!-- <img src="/assets/menu.png" alt="Right Decoration" class="side-img-right right"> -->
+        </div>
+    </div>
+
+     <!-- about -->
+     <div class="all">
+        <h5  data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">Hungry Yet</h5>
+        <h3 class="aboutHeader" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">About Us</h3>
+        <div class="about" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+            <div class="" >
+                <p >We The Nutrition Hub at Malad West, Mumbai, Maharashtra, serving food which is delicious and healthy,
+                    service is impeccable and prices are just right. The great ambience, exceptional diet food and
+                    excellent service make for a remarkable dining experience at our restaurant. The efficient &
+                    welcoming service in a comforting ambience is just appropriate for a healthy meal with family &
+                    friends.
+                    So, visit us for a healthy and complete new diet meal experience.</p>
+            </div>
+            <div class="about-img">
+                <img src="assets/about.png" alt="">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Amenities -->
+    <div class="all">
+        <div class="amenities-container">
+            <h5  data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">Hungry Yet</h5>
+            <h3 class="aboutHeader"data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">Amenities</h3>
+            <div class="Amenities-section">
+                <div class="amenities" data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
+                    <div class="iconSection">
+                        <img src="assets/truck.png" alt="Truck Icon">
+                    </div>
+                    <h4>Home Delivery</h4>
+                </div>
+                <div class="amenities" data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+                    <div class="iconSection">
+                        <img src="assets/diet.png" alt="Truck Icon">
+                    </div>
+                    <h4>Diet Plans</h4>
+                </div>
+                <div class="amenities" data-aos="fade-up" data-aos-duration="700" data-aos-delay="400">
+                    <div class="iconSection">
+                        <img src="assets/favorites.png" alt="Truck Icon">
+                    </div>
+                    <h4>High Quality</h4>
+                </div>
+                <div class="amenities" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+                    <div class="iconSection">
+                        <img src="assets/support.png" alt="Truck Icon">
+                    </div>
+                    <h4>Best support</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- contact -->
+    <div class="all">
+        <div class="contact">
+            <h5  data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">Hungry Yet</h5>
+            <h3 class="aboutHeader" data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">Contact Us</h3>
+            <div class="contact-container">
+                <div class="address">
+                    <div class="address-box" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100">
+                        <img src="assets/map.png" alt="Location">
+                        <div class="address-text">
+                            <h4>Our Office Address</h4>
+                            <p>2nd Floor, Kakani Tower, No:34, Khader Nawaz Khan Rd, Thousand Lights West, Nungambakkam,
+                                Chennai, Tamil Nadu 600006</p>
+                        </div>
+                    </div>
+                    <div class="address-box" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200">
+                        <img src="assets/email.png" alt="Location">
+                        <div class="address-text">
+                            <h4>Send Email</h4>
+                            <p>Support@hogist.com</p>
+                        </div>
+                    </div>
+                    <div class="address-box" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="300">
+                        <img src="assets/call.png" alt="Phone">
+                        <div class="address-text">
+                            <h4>Call Us</h4>
+                            <p>099626 67733</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="form">
+                        <input type="text" placeholder="Enter Your Name" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="100">
+                        <input type="text" placeholder="Enter Your Email" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200">
+                        <input type="text" placeholder="Enter Your Phone" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="300">
+                        <input type="text" placeholder="Enter Your Message" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="400">
+                    </div>
+                    <button class="formButton" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="500">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        var swiper = new Swiper(".swiper", {
+            loop: true, // Enables looping
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true, // Allows clicking bullets
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        AOS.init({
+            once: true
+        });
+    </script>
+</body>
+
+</html>
