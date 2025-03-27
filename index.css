@@ -9,7 +9,8 @@
 
 /* Background Styling */
 .background {
-    background: url(''), #84c441;
+    background: #84c441;
+    position: relative;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -23,23 +24,38 @@
     background: white;
     padding: 30px;
     border-radius: 15px;
-    width: 87vw;
+    width: 70vw;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     z-index: 50;
+    position: relative;
 }
 .meal-details{
     display: flex;
     margin: 20px 0;
     justify-content: center;
     gap: 30px;
+    align-items: center;
 }
 .meal-details img{
     width: 300px;
+    object-fit: cover;
+    border-radius: 10px;
 }
+.meal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Align text to the left */
+    padding: 20px;
+    gap: 20px;
+    text-align: left; /* Ensure text inside is also left-aligned */
+    width: 50%; 
+}
+
+
 .aboutHeader { 
     font-family: "Open Sans", sans-serif;
     text-align: center;
@@ -79,44 +95,26 @@ h5{
 }
 
 
-.meal-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    gap: 40px;
+
+
+.side-img-left, .side-img-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px; /* Adjust as needed */
+    height: auto;
+      /* Light effect behind */
+    z-index: 1; /* Ensure it's behind the card */
 }
 
-
+/* Positioning */
+.side-img-left {
+    left: 5%;
+}
 
 .side-img-right {
-    width: 20%;
-    /* Adjust as needed */
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
-}
-
-.side-img-left {
-    width: 20%;
-    /* Adjust as needed */
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.left {
-    left: 2%;
-}
-
-.right {
-    right: 2%;
+    right: 5%;
     transform: translateY(-50%) rotate(180deg);
-
 }
 
 
@@ -423,6 +421,10 @@ h5{
     .about {
         padding: 40px 40px;
     }
+    .side-img-left, .side-img-right {
+        width: 180px; /* Reduce image size */
+         /* Less opacity for better mobile experience */
+    }
 }
 
 
@@ -477,12 +479,24 @@ h5{
         padding: 20px;
 
     }
+    .side-img-left, .side-img-right {
+        display: none; /* Hide on small screens for better readability */
+    }
     .Amenities-section {
         flex-direction: column;
         align-items: center;
     }
     .amenities {
         width: 90%;
+    }
+    .meal-details {
+        flex-direction: column; /* Stack items */
+        text-align: center; /* Center text on smaller screens */
+    }
+
+    .meal-content {
+        width: 100%; /* Full width */
+        align-items: center; /* Center text for better mobile UX */
     }
 
     .filters {
