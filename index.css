@@ -6,6 +6,23 @@
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
+::-webkit-scrollbar {
+    width: 8px;  /* Width of scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #84c441; /* Scrollbar color */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6fa32e; /* Darker on hover */
+}
 
 /* Background Styling */
 .background {
